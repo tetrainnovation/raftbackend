@@ -14,6 +14,11 @@ public class Userdetails {
 
     @Id
     private String emailid;
+
+    public String getEmailid() {
+        return emailid;
+    }
+
     private String first_name;
     private String last_name;
     private Long river_id;
