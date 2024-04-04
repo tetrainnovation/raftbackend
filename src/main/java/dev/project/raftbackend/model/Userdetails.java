@@ -6,18 +6,18 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
 @Entity
 @Table(name = "userdetails")
 public class Userdetails {
 
+    @Getter
+    @Setter
     @Id
     private String emailid;
-
-    public String getEmailid() {
-        return emailid;
-    }
 
     private String first_name;
     private String last_name;
@@ -49,4 +49,6 @@ public class Userdetails {
     private String resedential_detail;
 
     private LocalDateTime createdAt;
+
+
 };

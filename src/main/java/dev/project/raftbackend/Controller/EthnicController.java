@@ -1,5 +1,5 @@
 
-package dev.project.raftbackend;
+package dev.project.raftbackend.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
