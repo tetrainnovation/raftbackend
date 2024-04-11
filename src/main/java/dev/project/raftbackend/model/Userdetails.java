@@ -19,6 +19,8 @@ public class Userdetails {
     @Id
     private String emailid;
 
+
+
     private String first_name;
     private String last_name;
     private Long river_id;
