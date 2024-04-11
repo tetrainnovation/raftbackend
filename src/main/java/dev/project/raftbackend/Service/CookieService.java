@@ -28,7 +28,7 @@ public class CookieService {
     public CookieService(UserService userService) {
         this.userService = userService;
     }
-    private static final String SECRET_KEY = "expensetrackerapikeyiniim12gjdfghgfvghjhbjnbnjnnkmjnkmfgbn";
+    private static final String SECRET_KEY = "raftbackendnewapikeyiniim12gjdfghgfvghjhbjnbnjnnkmjnkmfgbn";
 
     public String getCookieValue(HttpServletRequest request, String cookieName) {
         // Get the cookie from the request

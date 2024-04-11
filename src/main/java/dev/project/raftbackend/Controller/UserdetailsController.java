@@ -25,7 +25,7 @@ public class UserdetailsController {
     public String createUser(@RequestBody Userdetails userdetails) {
         System.out.println(userdetails);
         long timestamp = System.currentTimeMillis();
-        String secretkey = "expensetrackerapikeyiniim12gjdfghgfvghjhbjnbnjnnkmjnkmfgbn";
+        String secretkey = "raftbackendnewapikeyiniim12gjdfghgfvghjhbjnbnjnnkmjnkmfgbn";
         String token = Jwts.builder().signWith(SignatureAlgorithm.HS256, secretkey.getBytes())
                 .setIssuedAt(new Date(timestamp))
                 .setExpiration(new Date(timestamp + 86400000))
@@ -39,6 +39,7 @@ public class UserdetailsController {
 
             mailService.sendMail(userdetails.getEmailid(), "Your Verification Link", clickableLink);
             System.out.println("Mail Sent Successfully!");
+            repo.save(userdetails);
 
         }
         catch (Exception e){
